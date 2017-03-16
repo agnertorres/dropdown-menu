@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu mobile css</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="menu">
+      <div class="menu-header">
+        <h3>Clique no botão para abrir o menu!</h3>
+        <button id="menu-toggle"></button>
+      </div>
+      <div id="menu-content" class="hide">
+        <ul>
+          <li><a href="">Menu item</a></li>
+          <li><a href="">Menu item</a></li>
+          <li><a href="">Menu item</a></li>
+          <li><a href="">Menu item</a></li>
+          <li><a href="">Menu item</a></li>
+          <li><a href="">Menu item</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+  
+  var button = document.getElementById('menu-toggle'),
+      menuContent = document.getElementById('menu-content'),
+      isOpen = false;
+  
+  button.addEventListener('click', toggleMenu);
+  
+  function toggleMenu() {
+    
+    if(isOpen){
+      menuContent.className = 'hide';
+      isOpen = false;
+    
+    } else {
+      menuContent.className = '';
+      isOpen = true;
+    }
+  }
+  
+});
+</script>
+</body>
+</html>
